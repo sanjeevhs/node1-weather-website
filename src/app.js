@@ -74,7 +74,9 @@ app.get('/weather', (req, res) => {
             res.send({
                 location: location,
                 temperature: forecastData.currently.temperature,
-                precipProbability: forecastData.currently.precipProbability+' %'
+                precipProbability: forecastData.currently.precipProbability+' %',
+                windspeed: forecastData.currently.windSpeed,
+                humidity: forecastData.currently.humidity
                 
             });
             // res.render('index', {

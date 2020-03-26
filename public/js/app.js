@@ -17,7 +17,8 @@ weatherForm.addEventListener('submit', (subeve) => {
             } else {
                 message1.textContent = data.location;
                 message2.textContent = 'It is currently '+data.temperature
-                +' degrees out. There is a '+data.precipProbability+' chance of rain.';
+                +' degrees out. There is a '+data.precipProbability+' chance of rain. And also humidity is '
+                +data.humidity+' %, wind speed is '+data.windspeed+' kmph.';
             }
         });
 
