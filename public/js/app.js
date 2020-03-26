@@ -3,14 +3,14 @@ const search = document.querySelector('input');
 const message1 = document.querySelector('#msg1');
 const message2 = document.querySelector('#msg2');
 
-message1.textContent = '';
+message1.textContent = 'Loading..';
 message2.textContent = '';
 
 weatherForm.addEventListener('submit', (subeve) => {
 
     subeve.preventDefault();
 
-    fetch('http://127.0.0.1:3000/weather?address=' + search.value).then((response) => {
+    fetch('/weather?address=' + search.value).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 message1.textContent = data.error;
